@@ -1,0 +1,31 @@
+[general]
+device = "cpu"      # "cpu" or "cuda"
+max_images = 0      # 0 = use all images
+
+[dataset]
+root_dir = 'dataset\raw'
+
+[[models]]
+name = "ragdnet_gnn"
+type = "gnn"
+pipeline_cfg = 'packages\ragdnet\configs\image_to_graph\ragdnet_r75_115_k5.toml'
+ckpt = '...ckpt'
+class = "ragdnet.learning.models.gnn:GAT_L"
+
+[[models]]
+name = "unet"
+type = "image"
+ckpt = '...ckpt'
+class = "ragdnet.learning.models.unet:UNetScratch"
+
+[[models]]
+name = "segformer_b0"
+type = "image"
+ckpt = '...ckpt'
+class = "ragdnet.learning.models.segformer:SegFormerScratch"
+
+[[models]]
+name = "segformer_b2"
+type = "image"
+ckpt = '...ckpt'
+class = "ragdnet.learning.models.segformer:SegFormerScratch"

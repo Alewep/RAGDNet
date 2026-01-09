@@ -1,0 +1,11 @@
+# WORKSPACE CONFIG
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv.workspace]
+members = [
+    "packages/ragdnet",
+]
+

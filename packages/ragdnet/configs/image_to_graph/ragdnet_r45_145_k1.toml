@@ -1,0 +1,19 @@
+[segmenter]
+class = "PeakSegment"
+[segmenter.params]
+angle_range = [45,145]
+epsilon_rdp = 2.12
+peak_detection = true
+
+[watershed]
+class = "DistanceTransformWatershed"
+
+[graph_builder]
+class = "RegionGraphKNN"
+[graph_builder.params]
+k = 1
+
+[labeler]
+class = 'RegionLabeler'
+
+
