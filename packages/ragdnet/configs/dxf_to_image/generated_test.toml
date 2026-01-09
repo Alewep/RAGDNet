@@ -1,0 +1,17 @@
+[colorizer]
+class = "CategoricalColorizer"
+[colorizer.params.settings] # for each layer or type colorize them with different color
+layer = ["FD_Dimensions", "Hidden", "Break Lines"]
+type  = []
+
+[renderer]
+class = "PlotRenderer"
+[renderer.params]
+dpi = 300
+
+[segmenter]
+class = "ComponentSegmenter"
+[segmenter.params.font_map]
+"arial.ttf" = "ARIALUNI.ttf"
+[segmenter.params]
+excluded_layers = ["BORDER", "TITLEBLOCK"]
